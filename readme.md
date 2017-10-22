@@ -8,7 +8,7 @@
 
 [GoatseDapp.sol](./contracts/GoatseDapp.sol)
 
-## Report
+## Submission
 
 Despite what the comment in the payout function says, I think it's actually quite possible to rig the "random" selection of winners. I don't think the author accounted for the possibility that both casting of the votes and calling the finishPeriod function can happen inside a single transaction if the functions are called from a different contract.
 Attacker's contract has complete information of both current vote distribution and the value of the "now" variable before casting the votes and finishing the period, he could even setup his own incentivisation scheme using part of the proceeds from the rigged lottery to ensure his transaction gets in first.
